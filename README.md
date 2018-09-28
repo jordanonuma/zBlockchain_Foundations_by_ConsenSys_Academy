@@ -11,7 +11,7 @@ Financial penalties are doled by slashing a fraction of, or in some cases the fu
 
 The problem with each of these methods are detailed as follows:
 - Method (1) may not have a denomination of much relevance to the audience. As an exaggerated example, if you’re asked 0.1 units of unobtainiumorz for 1 ETH, this would be a slightly humorous joke but difficult sell for many reasons.
-- Method (2) uses centralized sources that necessarily need to be trusted. Exchange agreggators such as coinmarketcap.com are heavily relied on, but because owners of these sites have privileged write access to these feeds (often for good maintenance reasons) these also become a central point of failure and security vulnerability subject to possible corruption from within or without.
+- Method (2) uses centralized sources that necessarily need to be trusted. Exchange agreggators such as coinmarketcap.com are used heavily, and because owners of these sites have privileged write access to these feeds (often for good maintenance reasons) these also become a central point of failure and security vulnerability subject to possible corruption from within or without.
 
 
 ### How will a blockchain be applied to this use case? Which component pieces will be utilized? Will the blockchain used be public, private, or consortium and why?
