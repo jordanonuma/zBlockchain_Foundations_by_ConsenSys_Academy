@@ -22,7 +22,8 @@ Immutable smart contracts on the public Ethereum blockchain can be used to trust
 
 The public Ethereum blockchain is necessary because public auctions are required for each sub-feed. Each STAKE sub-feed will give a price for STAKE as a function of its denominated token as shown in its token pair (e.g. token pair STAKE:B [read as the price of token STAKE in terms of token B], token pair STAKE:C [read as the price of token STAKE in terms of token C], and so on up to however many tokens STAKE price will be denominated in).
 
-Take the case of STAKE in terms of DAI. The STAKE:DAI sub-feed’s procedure will be as follows:
+**Case: STAKE in terms of DAI**  
+The STAKE:DAI sub-feed’s procedure will be as follows:  
 
 1) Prime the sub-feed by purchasing STAKE tokens and sending to the Auction 1 contract.
 2) Auction 1 will sell a certain amount, _x_, STAKE tokens for DAI over a pre-defined time period. (The highest price of the auction, $\gamma$ DAI for every 1 STAKE, is noted).
@@ -33,12 +34,12 @@ Price = 0.5 * ($\gamma$ + 1/($\lambda$))
 
 To make clearer with concrete numbers:  
 
-Auction 1 (Auctioning 1 STAKE token)  
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; DAI &nbsp; &nbsp; &nbsp; STAKE  
-Round 1	&nbsp; &nbsp; 1 &nbsp; &nbsp; &nbsp; &nbsp;	&nbsp; &nbsp; &nbsp;1
-Round 2	&nbsp; &nbsp; 1.5 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1  
-Round 3	&nbsp; &nbsp; 1.7 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1  
-Round 4	&nbsp; &nbsp; 2	&nbsp; &nbsp; &nbsp; &nbsp;	&nbsp; &nbsp; &nbsp;1   
+**Auction 1 (Auctioning 1 STAKE token)**  
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; **DAI** &nbsp; &nbsp; &nbsp; **STAKE**  
+**Round 1**	&nbsp; &nbsp; 1 &nbsp; &nbsp; &nbsp; &nbsp;	&nbsp; &nbsp; &nbsp;1  
+**Round 2**	&nbsp; &nbsp; 1.5 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1  
+**Round 3**	&nbsp; &nbsp; 1.7 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1  
+**Round 4**	&nbsp; &nbsp; 2	&nbsp; &nbsp; &nbsp; &nbsp;	&nbsp; &nbsp; &nbsp;1   
 
 $\gamma$ = 2 DAI/STAKE (read as the “price of 1 STAKE token is 2 DAI tokens.”)  
 
