@@ -28,9 +28,9 @@ The STAKE:DAI sub-feed’s procedure will be as follows:
 1) Prime the sub-feed by purchasing STAKE tokens and sending to the Auction 1 contract.
 2) Auction 1 will sell a certain amount, _x_, STAKE tokens for DAI over a pre-defined time period. (The highest price of the auction, $\gamma$ DAI for every 1 STAKE, is noted).
 3) Auction 2 will then take a certain amount, _y_, DAI from Auction 1 and sell over the same pre-defined time period. (The highest price of the auction, $\lambda$ STAKE for every 1 DAI, is noted).
-4) Since $\gamma$ produces the maximum price of STAKE and 1/($\lambda$) produces the minimum price of STAKE, the price of STAKE is taken as the average of the two:
+4) Since $\gamma$ produces the maximum price of STAKE and 1/($\lambda$) produces the minimum price of STAKE, the sub-feed's price for STAKE is taken as the average of the two:
 
-_Price.SubFeed_ = 0.5 * ($\gamma$ + 1/($\lambda$))  
+&emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; _Price.SubFeed_ = 0.5 * ($\gamma$ + 1/($\lambda$))  
 
 To make clearer with concrete numbers:  
 
@@ -52,7 +52,7 @@ $\gamma$ = 2 DAI/STAKE (read as the “price of 1 STAKE token is 2 DAI tokens.�
 
 $\lambda$ = 4 STAKE/DAI  (read as the “price of 1 DAI token is 4 STAKE tokens.”)  
 
-_Price.SubFeed_ = 0.5 * ($\gamma$ + 1/($\lambda$)) = 0.5 * (2  + ¼) = 1.125 DAI/STAKE  
+&emsp; &emsp; &emsp; &emsp; &emsp; &emsp; _Price.SubFeed_ = 0.5 * ($\gamma$ + 1/($\lambda$)) = 0.5 * (2  + ¼) = 1.125 DAI/STAKE  
 
 This is read as the “STAKE:DAI sub-feed’s price for every 1 STAKE token is 1.125 DAI tokens.”    
 
