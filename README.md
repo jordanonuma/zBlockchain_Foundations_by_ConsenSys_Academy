@@ -30,7 +30,7 @@ The STAKE:DAI sub-feed’s procedure will be as follows:
 3) Auction 2 will then take a certain amount, _y_, DAI from Auction 1 and sell over the same pre-defined time period. (The highest price of the auction, $\lambda$ STAKE for every 1 DAI, is noted).
 4) Since $\gamma$ produces the maximum price of STAKE and 1/($\lambda$) produces the minimum price of STAKE, the sub-feed's price for STAKE is taken as the average of the two:
 
-&emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; _Price.SubFeed_ = 0.5 * ($\gamma$ + 1/($\lambda$))  
+&emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; _Price.SubFeed_ = 0.5 * ($\gamma$ + 1/($\lambda$))  
 
 To make clearer with concrete numbers:  
 
@@ -52,7 +52,7 @@ $\gamma$ = 2 DAI/STAKE (read as the “price of 1 STAKE token is 2 DAI tokens.�
 
 $\lambda$ = 4 STAKE/DAI  (read as the “price of 1 DAI token is 4 STAKE tokens.”)  
 
-&emsp; &emsp; &emsp; &emsp; &emsp; &emsp; _Price.SubFeed_ = 0.5 * ($\gamma$ + 1/($\lambda$)) = 0.5 * (2  + ¼) = 1.125 DAI/STAKE  
+&emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; _Price.SubFeed_ = 0.5 * ($\gamma$ + 1/($\lambda$)) = 0.5 * (2  + ¼) = 1.125 DAI/STAKE  
 
 This is read as the “STAKE:DAI sub-feed’s price for every 1 STAKE token is 1.125 DAI tokens.”    
 
@@ -74,9 +74,11 @@ On a time series sketch this might look like:
 
 Lastly, the total final STAKE price feed will equal to the average of all sub-feeds’ prices every two (2) auctions.  
 
-### How might a token be used for this use case? Why is it needed, and what benefit does it bring to the project? If a custom token isn't necessary, explain why.
+### How might a token be used for this use case? Why is it needed, and what benefit does it bring to the project? If a custom token isn't necessary, explain why.  
 
-New token, if applicable.
+The goal of the decentralized price feed is to quantify the price of all tokens (staking tokens focused on for this case) relative to other tokens. The more liquid the auctions are, the better for giving accurate prices.
+
+An additional token isn’t necessary to setup these auctions, but an additional custom token could be useful for setting up initial liquidity either by using fundraising capital to purchase other sub-tokens or even by setting up altogether new sub-feed token pairs such as ETH:LIQUID, MKR:LIQUID, and DAI:LIQUID. If easy fiat on and off ramps are provided using token LIQUID, the price feed will benefit from increased auction participation.  
 
 ### Describe some other details and factors that are worth considering in this use case. Are there any difficulties or challenges that may have to be solved? Are there any weaknesses you could see that could be exploited? Feel free to ask your own question here, and provide an answer, if those questions aren't helpful.
 
