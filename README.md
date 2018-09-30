@@ -34,11 +34,11 @@ Price = 0.5 * ($\gamma$ + 1/($\lambda$))
 To make clearer with concrete numbers:  
 
 Auction 1 (Auctioning 1 STAKE token)  
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; DAI	&nbsp; STAKE  
-Round 1	&nbsp; &nbsp; 1 &nbsp; &nbsp; &nbsp; &nbsp;	1  
-Round 2	&nbsp; &nbsp; 1.5 &nbsp; &nbsp; &nbsp;1  
-Round 3	&nbsp; &nbsp; 1.7 &nbsp; &nbsp; &nbsp;1  
-Round 4	&nbsp; &nbsp; 2	&nbsp; &nbsp; &nbsp; &nbsp; 1  
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; DAI &nbsp; &nbsp; &nbsp; STAKE  
+Round 1	&nbsp; &nbsp; 1 &nbsp; &nbsp; &nbsp; &nbsp;	&nbsp; &nbsp; &nbsp;1
+Round 2	&nbsp; &nbsp; 1.5 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1  
+Round 3	&nbsp; &nbsp; 1.7 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1  
+Round 4	&nbsp; &nbsp; 2	&nbsp; &nbsp; &nbsp; &nbsp;	&nbsp; &nbsp; &nbsp;1   
 
 $\gamma$ = 2 DAI/STAKE (read as the “price of 1 STAKE token is 2 DAI tokens.”)  
 
