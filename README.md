@@ -46,9 +46,9 @@ $\gamma$ = 2 DAI/STAKE (read as the “price of 1 STAKE token is 2 DAI tokens.�
 **Auction 2 (Auctioning 1 DAI token)**    
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; **STAKE** &nbsp; &nbsp; &nbsp; &nbsp; **DAI**  
 **Round 1**	&nbsp; &nbsp; 0.5	&nbsp; &nbsp; &nbsp; &nbsp;	&nbsp; &nbsp; &nbsp;1  
-**Round 2**	&nbsp; &nbsp; 1	&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1  
-**Round 3**	&nbsp; &nbsp; 3	&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1  
-**Round 4**	&nbsp; &nbsp; 4	&nbsp; &nbsp; &nbsp; &nbsp;	&nbsp; &nbsp; &nbsp;1  
+**Round 2**	&nbsp; &nbsp; 1	&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1  
+**Round 3**	&nbsp; &nbsp; 3	&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1  
+**Round 4**	&nbsp; &nbsp; 4	&nbsp; &nbsp; &nbsp; &nbsp;	&nbsp; &nbsp; &nbsp; &nbsp; 1  
 
 $\lambda$ = 4 STAKE/DAI  (read as the “price of 1 DAI token is 4 STAKE tokens.”)  
 
@@ -58,18 +58,18 @@ This is read as the “STAKE:DAI sub-feed’s price for every 1 STAKE token is 1
 
 Each sub-feed will run one auction at at a time, but all sub-feeds can run simultaneously. For example, for three (3) STAKE sub-feeds, for optimum price decentralization, all 3 sub-feeds (STAKE:B, STAKE:C, and STAKE:D) will be running at any given time. STAKE:B, STAKE: C, and STAKE:D will each only have one auction running.  
 
-On a sketch of a time series this might look like:  
+On a time series sketch this might look like:  
 
 ^  
 |  
 | &nbsp; &nbsp; STAKE:B  
-| &nbsp; &nbsp; Auction 1 | Auction 2| Auction 3| Auction 4  
+| &nbsp; &nbsp; Auction 1 | Auction 2 | Auction 3 | Auction 4  
 |    
 | &nbsp; &nbsp; STAKE:C  
-| &nbsp; &nbsp; Auction 1 | Auction 2| Auction 3| Auction 4  
+| &nbsp; &nbsp; Auction 1 | Auction 2 | Auction 3 | Auction 4  
 |    
 | &nbsp; &nbsp; STAKE:D  
-| &nbsp; &nbsp; Auction 1 | Auction 2| Auction 3| Auction 4  
+| &nbsp; &nbsp; Auction 1 | Auction 2 | Auction 3 | Auction 4  
 -------------------------------------------------------------> time  
 
 Lastly, the total final STAKE price feed will equal to the average of all sub-feeds’ prices every two (2) auctions.  
