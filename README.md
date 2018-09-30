@@ -82,4 +82,15 @@ An additional token isn’t necessary to setup these auctions, but an additional
 
 ### Describe some other details and factors that are worth considering in this use case. Are there any difficulties or challenges that may have to be solved? Are there any weaknesses you could see that could be exploited? Feel free to ask your own question here, and provide an answer, if those questions aren't helpful.
 
-Additional concerns and areas for future research.
+Rigorously defining the auction framework is key to encouraging honest auction participation. Possible weaknesses that could allow an adversary to exploit the price feed raises the questions:
+
+- What is a good amount of STAKE tokens, _x_, to buy to prime the sub-feed in Auction 1?
+- What is a good amount of DAI tokens, _y_, to start Auction 2?
+- What is the correct pre-defined time period to run the auctions?
+- Is it better to have a dynamic time period that adjusts based on other factors such as how fast the previous auctions are sold out (indicating previous price increments were too small) or how slow the previous auctions are sold out (indicating previous price increments were too large)?
+
+These price feed variables are very important to get correct*, as it will become valuable to exploit a decentralized price feed that becomes widely used. Similar to when ETH becomes a staking token in Casper, each of the tokens that have a decentralized price feed will see an increase in supply and demand pressure. Arbitraging with smaller, less dynamic exchanges will become profitable, and supply becomes squeezed when a certain fraction of the tokens get quasi-“locked up” to participate in the continuous, decentralized sub-feed auctions open to all. Demand (buy) pressure of each token will also increase as the tokens gain a quantified value by means of an additional way for token holders (setting the price floor via the auctions) and arbitragers to make money by participating in this decentralized price feed.  
+
+\*A counterargument to some or all of these questions is it may be preferable to have no definite number hard coded and have the market decide (for example in Bitcoin, users decide whether transactions have acceptable finality based on how many confirmations they require). 
+
+Credit goes largely to the Augur team and its community members currently discussing a similar mechanism for the REP token. However, I believe extending decentralized price feeds for all tokens, with many sub-feeds to make the system robust from attack, is a worthy project if only as a common good that floats all the boats in the cryptocurrency landscape.  
