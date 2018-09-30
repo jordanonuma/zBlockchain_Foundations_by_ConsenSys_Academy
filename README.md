@@ -30,7 +30,7 @@ The STAKE:DAI sub-feed’s procedure will be as follows:
 3) Auction 2 will then take a certain amount, _y_, DAI from Auction 1 and sell over the same pre-defined time period. (The highest price of the auction, $\lambda$ STAKE for every 1 DAI, is noted).
 4) Since $\gamma$ produces the maximum price of STAKE and 1/($\lambda$) produces the minimum price of STAKE, the price of STAKE is taken as the average of the two:
 
-Price = 0.5 * ($\gamma$ + 1/($\lambda$))  
+_Price.SubFeed_ = 0.5 * ($\gamma$ + 1/($\lambda$))  
 
 To make clearer with concrete numbers:  
 
@@ -44,7 +44,7 @@ To make clearer with concrete numbers:
 $\gamma$ = 2 DAI/STAKE (read as the “price of 1 STAKE token is 2 DAI tokens.”)  
 
 **Auction 2 (Auctioning 1 DAI token)**    
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; **STAKE** &nbsp; &nbsp; &nbsp; &nbsp; **DAI**
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; **STAKE** &nbsp; &nbsp; &nbsp; &nbsp; **DAI**  
 **Round 1**	&nbsp; &nbsp; 0.5	&nbsp; &nbsp; &nbsp; &nbsp;	&nbsp; &nbsp; &nbsp;1  
 **Round 2**	&nbsp; &nbsp; 1	&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1  
 **Round 3**	&nbsp; &nbsp; 3	&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1  
@@ -52,7 +52,7 @@ $\gamma$ = 2 DAI/STAKE (read as the “price of 1 STAKE token is 2 DAI tokens.�
 
 $\lambda$ = 4 STAKE/DAI  (read as the “price of 1 DAI token is 4 STAKE tokens.”)  
 
-Price = 0.5 * ($\gamma$ + 1/($\lambda$)) = 0.5 * (2  + ¼) = 1.125 DAI/STAKE  
+_Price.SubFeed_ = 0.5 * ($\gamma$ + 1/($\lambda$)) = 0.5 * (2  + ¼) = 1.125 DAI/STAKE  
 
 This is read as the “STAKE:DAI sub-feed’s price for every 1 STAKE token is 1.125 DAI tokens.”    
 
@@ -62,14 +62,14 @@ On a sketch of a time series this might look like:
 
 ^  
 |  
-|STAKE:B  
-|Auction 1 | Auction 2| Auction 3| Auction 4  
-|  
-|STAKE:C  
-|Auction 1 | Auction 2| Auction 3| Auction 4  
-|  
-|STAKE:D  
-|Auction 1 | Auction 2| Auction 3| Auction 4  
+| &nbsp; &nbsp; STAKE:B  
+| &nbsp; &nbsp; Auction 1 | Auction 2| Auction 3| Auction 4  
+|    
+| &nbsp; &nbsp; STAKE:C  
+| &nbsp; &nbsp; Auction 1 | Auction 2| Auction 3| Auction 4  
+|    
+| &nbsp; &nbsp; STAKE:D  
+| &nbsp; &nbsp; Auction 1 | Auction 2| Auction 3| Auction 4  
 -------------------------------------------------------------> time  
 
 Lastly, the total final STAKE price feed will equal to the average of all sub-feeds’ prices every two (2) auctions.  
