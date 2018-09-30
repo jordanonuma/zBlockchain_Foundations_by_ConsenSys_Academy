@@ -26,8 +26,8 @@ The public Ethereum blockchain is necessary because public auctions are required
 The STAKE:DAI sub-feed’s procedure will be as follows:  
 
 1) Prime the sub-feed by purchasing STAKE tokens and sending to the Auction 1 contract.
-2) Auction 1 will sell a certain amount, _x_, STAKE tokens for DAI over a pre-defined time period. (The highest price of the auction, $\gamma$ DAI for every 1 STAKE, is noted).
-3) Auction 2 will then take a certain amount, _y_, DAI from Auction 1 and sell over the same pre-defined time period. (The highest price of the auction, $\lambda$ STAKE for every 1 DAI, is noted).
+2) Auction 1 will sell a certain amount, _x_, STAKE tokens for DAI over a pre-defined time period, _t_. (The highest price of the auction, $\gamma$ DAI for every 1 STAKE, is noted).
+3) Auction 2 will then take a certain amount, _y_, DAI from Auction 1 and sell over the same pre-defined time period, _t_. (The highest price of the auction, $\lambda$ STAKE for every 1 DAI, is noted).
 4) Since $\gamma$ produces the maximum price of STAKE and 1/($\lambda$) produces the minimum price of STAKE, the sub-feed's price for STAKE is taken as the average of the two:
 
 &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; _Price.SubFeed_ = 0.5 * ($\gamma$ + 1/($\lambda$))  
@@ -86,12 +86,12 @@ Rigorously defining the auction framework is key to encouraging honest auction p
 
 - What is a good amount of STAKE tokens, _x_, to buy to prime the sub-feed in Auction 1?
 - What is a good amount of DAI tokens, _y_, to start Auction 2?
-- What is the correct pre-defined time period to run the auctions?
+- What is the correct pre-defined time period, _t_, to run the auctions?
 - Is it better to have a dynamic time period that adjusts based on other factors such as how fast the previous auctions are sold out (indicating previous price increments were too small) or how slow the previous auctions are sold out (indicating previous price increments were too large)?
 
-These price feed variables are very important to get correct*, as it will become valuable to exploit a decentralized price feed that becomes widely used. Similar to when ETH becomes a staking token in Casper, each of the tokens that have a decentralized price feed will see an increase in supply and demand pressure. Arbitraging with smaller, less dynamic exchanges will become profitable, and supply becomes squeezed when a certain fraction of the tokens get quasi-“locked up” to participate in the continuous, decentralized sub-feed auctions open to all. Demand (buy) pressure of each token will also increase as the tokens gain a quantified value by means of an additional way for token holders (setting the price floor via the auctions) and arbitragers to make money by participating in this decentralized price feed.  
+Sub-feed variables _x_, _y_, and _t_ are very important to get correct*, as it will become valuable to exploit a decentralized price feed that becomes widely used. Similar to when ETH becomes a staking token in Casper, each of the tokens that have a decentralized price feed will see an increase in supply and demand pressure. Arbitraging with smaller, less dynamic exchanges will become profitable, and supply becomes squeezed when a certain fraction of the tokens get quasi-“locked up” to participate in the continuous, decentralized sub-feed auctions open to all. Demand (buy) pressure of each token will also increase as the tokens gain a quantified value by means of an additional way for token holders (setting the price floor via the auctions) and arbitragers to make money by participating in this decentralized price feed.  
 
 \*A counterargument to some or all of these questions is it may be preferable to have no definite number hard coded and have the market decide (for example in Bitcoin, users decide whether transactions have acceptable finality based on how many confirmations they require).  
 
 __________________________________________________________________________________________________________________________  
-Credit goes largely to the Augur team and its community members currently discussing a similar mechanism for the REP token. However, I believe extending decentralized price feeds for all tokens, with many sub-feeds to make the system robust from attack, is a worthy project if only as a common good that floats all the boats in the cryptocurrency landscape.  
+Credit goes largely to the Augur team and its community members currently discussing a similar mechanism for the REP token. However I believe extending decentralized price feeds for all tokens with many sub-feeds to make each price feed, and thus overall system, more resilient from attack is a worthy project if only as a common good that floats all the boats in the cryptocurrency landscape.   
