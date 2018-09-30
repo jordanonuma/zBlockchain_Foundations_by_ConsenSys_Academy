@@ -1,13 +1,13 @@
-# Final: Decentralized Price Feeds Especially Intended for Proof of Stake Tokens
+# Final: Decentralized Price Feeds by First Niching Down to Proof of Stake Tokens
 ### What is the business case, area, or topic that this use case applies to?
 
-This set of smart contracts’ goal is to provide a metric for Proof of Stake token security by quantifying the value of the token identified by the market.
+This set of smart contracts’ goal is to provide a metric for Proof of Stake token security by properly incentivizing a continuous, decentralized set of markets to quantify the value of the staking token.  
 
 ### What problem are you trying to solve? What is the value created by solving this problem?
 
 Staking tokens are becoming increasingly used in design mechanism for dApp security. Security is gained by incurring a financial penalty to the user for deviant behavior larger than any financial reward possible, where deviant behavior is defined by the protocol.
 
-Financial penalties are doled by slashing a fraction of, or in some cases the full amount, of collateral the user staked. Currently, this loss is either denominated in: 1) other tokens; 2) some fiat amount using an exchange API aggregator such as coinmarketcap.com; or 3) some combination of (1) and (2).
+Financial penalties are made by slashing a fraction, or in some cases the full amount, of collateral the user staked. Currently, this loss is either denominated in: 1) other tokens; 2) some fiat amount using an exchange API aggregator such as coinmarketcap.com; or 3) some combination of (1) and (2).
 
 The problem with each of these methods are detailed as follows:
 - Method (1) may not have a denomination of much relevance to the audience. As an exaggerated example, if you’re asked 0.1 units of unobtainiumorz for 1 ETH, this would be a slightly humorous joke but difficult sell for many reasons.
@@ -17,7 +17,7 @@ The problem with each of these methods are detailed as follows:
 
 Immutable smart contracts on the public Ethereum blockchain can be used to trustlessly create decentralized price feeds for any token. Taking the hypothetical token STAKE as an example, the decentralized price feed will include an aggregate price for STAKE in terms of other tokens (e.g. Tokens B, C, and D) where:
 
-1) the more prices in terms of other tokens, or sub-feeds, the stabler the aggregate feed (less chance of manipulation by an adversary); and
+1) The more prices in terms of other tokens, or sub-feeds, the stabler the aggregate feed (less chance of manipulation by an adversary); and
 2) Tokens B, C, and D can be any ERC-20 token such as DAI, ETH, and MKR. Eventually as fiat on-ramps become more available, these dominations can also be related directly, or indirectly, in terms of fiat (e.g. USD, YEN, KRW, and so on).
 
 The public Ethereum blockchain is necessary because public auctions are required for each sub-feed. Each STAKE sub-feed will give a price for STAKE as a function of its denominated token as shown in its token pair (e.g. token pair STAKE:B [read as the price of token STAKE in terms of token B], token pair STAKE:C [read as the price of token STAKE in terms of token C], and so on up to however many tokens STAKE price will be denominated in).
@@ -56,7 +56,7 @@ $\lambda$ = 4 STAKE/DAI  (read as the “price of 1 DAI token is 4 STAKE tokens.
 
 This is read as the “STAKE:DAI sub-feed’s price for every 1 STAKE token is 1.125 DAI tokens.”    
 
-Each sub-feed will run one auction at at a time, but all sub-feeds can run simultaneously. For example, for three (3) STAKE sub-feeds, for optimum price decentralization, all 3 sub-feeds (STAKE:B, STAKE:C, and STAKE:D) will be running at any given time. STAKE:B, STAKE: C, and STAKE:D will each only have one auction running.  
+Each sub-feed will run one auction at at a time, but all sub-feeds can run simultaneously. For three (3) STAKE sub-feeds as an example, for optimum price decentralization, all 3 sub-feeds (STAKE:B, STAKE:C, and STAKE:D) will be running at any given time. STAKE:B, STAKE: C, and STAKE:D will each only have one auction running.  
 
 On a time series sketch this might look like:  
 
@@ -94,4 +94,4 @@ Sub-feed variables _x_, _y_, and _t_ are very important to get correct*, as it w
 \*A counterargument to some or all of these questions is it may be preferable to have no definite number hard coded and have the market decide (for example in Bitcoin, users decide whether transactions have acceptable finality based on how many confirmations they require).  
 
 __________________________________________________________________________________________________________________________  
-Credit goes largely to the Augur team and its community members currently discussing a similar mechanism for the REP token. However I believe extending decentralized price feeds for all tokens with many sub-feeds to make each price feed, and thus overall system, more resilient from attack is a worthy project if only as a common good that floats all the boats in the cryptocurrency landscape.   
+Credit goes largely to the Augur team and its community members currently discussing a similar mechanism for the REP token. However I believe extending decentralized price feeds for all tokens (including ones not used in Proof of Stake such as Non-Fungible, ERC721 tokens) with many sub-feeds to make each price feed, and thus overall pricing system, more resilient from attack is a worthy project if only as a common good that floats all the boats in the cryptocurrency landscape.   
