@@ -44,11 +44,11 @@ To make clearer with concrete numbers:
 $\gamma$ = 2 DAI/STAKE (read as the “price of 1 STAKE token is 2 DAI tokens.”)  
 
 **Auction 2 (Auctioning 1 DAI token)**    
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; **STAKE** &nbsp; &nbsp; &nbsp; &nbsp; **DAI**  
-**Round 1**	&nbsp; &nbsp; 0.5	&nbsp; &nbsp; &nbsp; &nbsp;	&nbsp; &nbsp; &nbsp;1  
-**Round 2**	&nbsp; &nbsp; 1	&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1  
-**Round 3**	&nbsp; &nbsp; 3	&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1  
-**Round 4**	&nbsp; &nbsp; 4	&nbsp; &nbsp; &nbsp; &nbsp;	&nbsp; &nbsp; &nbsp; &nbsp; 1  
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; **STAKE** &nbsp; &nbsp; **DAI**  
+**Round 1**	&nbsp; &nbsp; 0.5	&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;1  
+**Round 2**	&nbsp; &nbsp; 1	&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1  
+**Round 3**	&nbsp; &nbsp; 3	&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1  
+**Round 4**	&nbsp; &nbsp; 4	&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1  
 
 $\lambda$ = 4 STAKE/DAI  (read as the “price of 1 DAI token is 4 STAKE tokens.”)  
 
