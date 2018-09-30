@@ -29,48 +29,49 @@ Take the case of STAKE in terms of DAI. The STAKE:DAI sub-feed’s procedure wil
 3) Auction 2 will then take a certain amount, _y_, DAI from Auction 1 and sell over the same pre-defined time period. (The highest price of the auction, $\lambda$ STAKE for every 1 DAI, is noted).
 4) Since $\gamma$ produces the maximum price of STAKE and 1/($\lambda$) produces the minimum price of STAKE, the price of STAKE is taken as the average of the two:
 
-Price = 0.5 * ($\gamma$ + 1/($\lambda$))
+Price = 0.5 * ($\gamma$ + 1/($\lambda$))  
 
-To make clearer with concrete numbers:
+To make clearer with concrete numbers:  
 
-Auction 1 (Auctioning 1 STAKE token)
-		DAI		STAKE
-Round 1	1		1
-Round 2	1.5		1
-Round 3	1.7		1
-Round 4	2		1
+Auction 1 (Auctioning 1 STAKE token)  
+		DAI		STAKE  
+Round 1	1		1  
+Round 2	1.5		1  
+Round 3	1.7		1  
+Round 4	2		1  
 
-$\gamma$ = 2 DAI/STAKE (read as the “price of 1 STAKE token is 2 DAI tokens.”)
+$\gamma$ = 2 DAI/STAKE (read as the “price of 1 STAKE token is 2 DAI tokens.”)  
 
-Auction 2 (Auctioning 1 DAI token)
-		STAKE	DAI
-Round 1	0.5		1
-Round 2	1		1
-Round 3	3		1
-Round 4	4		1
+Auction 2 (Auctioning 1 DAI token)  
+		STAKE	DAI  
+Round 1	0.5		1  
+Round 2	1		1  
+Round 3	3		1  
+Round 4	4		1  
 
-$\lambda$ = 4 STAKE/DAI  (read as the “price of 1 DAI token is 4 STAKE tokens.”)
+$\lambda$ = 4 STAKE/DAI  (read as the “price of 1 DAI token is 4 STAKE tokens.”)  
 
-Price = 0.5 * ($\gamma$ + 1/($\lambda$)) = 0.5 * (2  + ¼) = 1.125 DAI/STAKE
+Price = 0.5 * ($\gamma$ + 1/($\lambda$)) = 0.5 * (2  + ¼) = 1.125 DAI/STAKE  
 
-This is read as the “STAKE:DAI sub-feed’s price for every 1 STAKE token is 1.125 DAI tokens.”
+This is read as the “STAKE:DAI sub-feed’s price for every 1 STAKE token is 1.125 DAI tokens.”    
 
-Each sub-feed will run one auction at at a time, but all sub-feeds can run simultaneously. For example, for three (3) STAKE sub-feeds, for optimum price decentralization, all 3 sub-feeds (STAKE:B, STAKE:C, and STAKE:D) will be running at any given time. STAKE:B, STAKE: C, and STAKE:D will each only have one auction running.
+Each sub-feed will run one auction at at a time, but all sub-feeds can run simultaneously. For example, for three (3) STAKE sub-feeds, for optimum price decentralization, all 3 sub-feeds (STAKE:B, STAKE:C, and STAKE:D) will be running at any given time. STAKE:B, STAKE: C, and STAKE:D will each only have one auction running.  
 
-On a sketch of a time series this might look like:
+On a sketch of a time series this might look like:  
 
-|
-|STAKE:B
-|Auction 1 | Auction 2| Auction 3| Auction 4
-|
-|STAKE:C
-|Auction 1 | Auction 2| Auction 3| Auction 4
-|
-|STAKE:D
-|Auction 1 | Auction 2| Auction 3| Auction 4
------------------------------------------------------→ time
+^  
+|  
+|STAKE:B  
+|Auction 1 | Auction 2| Auction 3| Auction 4  
+|  
+|STAKE:C  
+|Auction 1 | Auction 2| Auction 3| Auction 4  
+|  
+|STAKE:D  
+|Auction 1 | Auction 2| Auction 3| Auction 4  
+------------------------------------------------------> time  
 
-Lastly, the total final STAKE price feed will equal to the average of all sub-feeds’ prices every two (2) auctions.
+Lastly, the total final STAKE price feed will equal to the average of all sub-feeds’ prices every two (2) auctions.  
 
 ### How might a token be used for this use case? Why is it needed, and what benefit does it bring to the project? If a custom token isn't necessary, explain why.
 
