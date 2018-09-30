@@ -34,20 +34,20 @@ Price = 0.5 * ($\gamma$ + 1/($\lambda$))
 To make clearer with concrete numbers:  
 
 Auction 1 (Auctioning 1 STAKE token)  
-		DAI		STAKE  
-Round 1	1		1  
-Round 2	1.5		1  
-Round 3	1.7		1  
-Round 4	2		1  
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; DAI		STAKE  
+Round 1	&nbsp; &nbsp; 1 &nbsp; &nbsp; &nbsp; &nbsp;	1  
+Round 2	&nbsp; &nbsp; 1.5 &nbsp; &nbsp; &nbsp;1  
+Round 3	&nbsp; &nbsp; 1.7 &nbsp; &nbsp; &nbsp;1  
+Round 4	&nbsp; &nbsp; 2	&nbsp; &nbsp; &nbsp; &nbsp; 1  
 
 $\gamma$ = 2 DAI/STAKE (read as the “price of 1 STAKE token is 2 DAI tokens.”)  
 
 Auction 2 (Auctioning 1 DAI token)  
-		STAKE	DAI  
+&nbsp; STAKE	DAI  
 Round 1	0.5		1  
-Round 2	1		1  
-Round 3	3		1  
-Round 4	4		1  
+Round 2	1	  	1  
+Round 3	3	    1  
+Round 4	4	   	1  
 
 $\lambda$ = 4 STAKE/DAI  (read as the “price of 1 DAI token is 4 STAKE tokens.”)  
 
@@ -69,7 +69,7 @@ On a sketch of a time series this might look like:
 |  
 |STAKE:D  
 |Auction 1 | Auction 2| Auction 3| Auction 4  
-------------------------------------------------------> time  
+-------------------------------------------------------------> time  
 
 Lastly, the total final STAKE price feed will equal to the average of all sub-feeds’ prices every two (2) auctions.  
 
