@@ -20,7 +20,7 @@ Immutable smart contracts on the public Ethereum blockchain can be used to trust
 1) The more prices in terms of other tokens, or sub-feeds, the stabler the aggregate feed (less chance of manipulation by an adversary); and
 2) Tokens B, C, and D can be any ERC-20 token such as DAI, ETH, and MKR. Eventually as fiat on-ramps become more available, these dominations can also be related directly, or indirectly, in terms of fiat (e.g. USD, YEN, KRW, and so on).
 
-The public Ethereum blockchain is necessary because public auctions are required for each sub-feed. Each STAKE sub-feed will give a price for STAKE as a function of its denominated token as shown in its token pair (e.g. token pair STAKE:B [read as the price of token STAKE in terms of token B], token pair STAKE:C [read as the price of token STAKE in terms of token C], and so on up to however many tokens STAKE price will be denominated in).
+The public Ethereum blockchain is necessary because public auctions are required for each sub-feed. Each STAKE sub-feed will give a price for STAKE as a function of its denominated token as shown in its token pair (e.g. token pair STAKE:B [read as "the price of token STAKE in terms of token B"], token pair STAKE:C [read as "the price of token STAKE in terms of token C"], and so on up to however many tokens STAKE price will be denominated in).
 
 **Case: STAKE in terms of DAI**  
 The STAKE:DAI sub-feed’s procedure will be as follows:  
@@ -56,7 +56,7 @@ $\lambda$ = 4 STAKE/DAI  (read as the “price of 1 DAI token is 4 STAKE tokens.
 
 This is read as the “STAKE:DAI sub-feed’s price for every 1 STAKE token is 1.125 DAI tokens.”    
 
-Each sub-feed will run one auction at at a time, but all sub-feeds can run simultaneously. For three (3) STAKE sub-feeds as an example, for optimum price decentralization, all 3 sub-feeds (STAKE:B, STAKE:C, and STAKE:D) will be running at any given time. STAKE:B, STAKE: C, and STAKE:D will each only have one auction running.  
+Each sub-feed will run one auction at at a time, but all sub-feeds can run simultaneously. In a hypothetical world with three (3) STAKE sub-feeds as an example, for optimum price decentralization, all 3 sub-feeds (STAKE:B, STAKE:C, and STAKE:D) will be running at any given time. STAKE:B, STAKE: C, and STAKE:D will each only have one auction running.  
 
 On a time series sketch this might look like:  
 
@@ -78,7 +78,7 @@ Lastly, the total final STAKE price feed will equal to the average of all sub-fe
 
 The goal of the decentralized price feed is to quantify the price of all tokens (staking tokens focused on for this case) relative to other tokens. The more liquid the auctions are, the better for giving accurate prices.
 
-An additional token isn’t necessary to setup these auctions, but an additional custom token could be useful for setting up initial liquidity either by using fundraising capital to purchase other sub-tokens or even by setting up altogether new sub-feed token pairs such as ETH:LIQUID, MKR:LIQUID, and DAI:LIQUID. If easy fiat on and off ramps are provided using token LIQUID, the price feed will benefit from increased auction participation.  
+An additional token isn’t necessary to setup these auctions, but an additional custom token could be useful for setting up initial liquidity either by using fundraising capital to purchase other sub-tokens or even by setting up altogether new sub-feed token pairs such as ETH:LIQUID, MKR:LIQUID, and DAI:LIQUID. If easy fiat on- and off-ramps are provided using token LIQUID, the price feed will benefit from increased auction participation.  
 
 ### Describe some other details and factors that are worth considering in this use case. Are there any difficulties or challenges that may have to be solved? Are there any weaknesses you could see that could be exploited? Feel free to ask your own question here, and provide an answer, if those questions aren't helpful.
 
