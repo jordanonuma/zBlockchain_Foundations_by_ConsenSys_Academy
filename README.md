@@ -11,14 +11,14 @@ Financial penalties are made by slashing a fraction, or in some cases the full a
 
 The problem with each of these methods are detailed as follows:
 - Method (1) may not have a denomination of much relevance to the audience. As an exaggerated example, if you’re asked 0.1 units of unobtainiumorz for 1 ETH, this would be a slightly humorous joke but difficult sell for many reasons.
-- Method (2) uses centralized sources that necessarily need to be trusted. Exchange agreggators such as coinmarketcap.com are used heavily, and because owners of these sites have privileged write access to these feeds (often for good maintenance reasons) these also become a central point of failure and security vulnerability subject to possible corruption from within or without.
+- Method (2) uses centralized sources that necessarily need to be trusted. Exchange aggregators such as coinmarketcap.com are used heavily, and because owners of these sites have privileged write access to these feeds (often for good maintenance reasons) these also become a central point of failure and security vulnerability subject to possible corruption from within or without.
 
 ### How will a blockchain be applied to this use case? Which component pieces will be utilized? Will the blockchain used be public, private, or consortium and why?
 
 Immutable smart contracts on the public Ethereum blockchain can be used to trustlessly create decentralized price feeds for any token. Taking the hypothetical token STAKE as an example, the decentralized price feed will include an aggregate price for STAKE in terms of other tokens (e.g. Tokens B, C, and D) where:
 
 1) The more prices in terms of other tokens, or sub-feeds, the stabler the aggregate feed (less chance of manipulation by an adversary); and
-2) Tokens B, C, and D can be any ERC-20 token such as DAI, ETH, and MKR. Eventually as fiat on-ramps become more available, these dominations can also be related directly, or indirectly, in terms of fiat (e.g. USD, YEN, KRW, and so on).
+2) Tokens B, C, and D can be any ERC-20 token such as DAI, ETH, and MKR. Eventually as fiat on-ramps become more available, these denominations can also be related directly, or indirectly, in terms of fiat (e.g. USD, YEN, KRW, and so on).
 
 The public Ethereum blockchain is necessary because public auctions are required for each sub-feed. Each STAKE sub-feed will give a price for STAKE as a function of its denominated token as shown in its token pair (e.g. token pair STAKE:B [read as "the price of token STAKE in terms of token B"], token pair STAKE:C [read as "the price of token STAKE in terms of token C"], and so on up to however many tokens STAKE price will be denominated in).
 
